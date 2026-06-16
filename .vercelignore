@@ -1,0 +1,8 @@
+node_modules
+vendor
+.env.local
+.env.*.local
+storage/logs
+.git
+tests
+database/seeders
