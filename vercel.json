@@ -1,7 +1,7 @@
 {
   "buildCommand": "composer install --no-dev --no-interaction --prefer-dist && npm run build",
   "outputDirectory": ".",
-  "publicPath": "public",
+
   "env": {
     "APP_ENV": "production"
   },
