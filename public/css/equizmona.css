@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #960101;
+    --sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #960101;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #960101 0%, #e60329 100%);
+}
+
+.auth-wrapper {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+.auth-card-wide {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 12px;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar .nav-link {
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding: 10px 14px;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-card {
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.student-wrapper {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.exam-header {
+    z-index: 1030;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.answer-option:hover {
+    background: #f8f9fa;
+}
+
+.nav-q.active {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #121212;
+}
+
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .navbar-light {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .table-light {
+    --bs-table-bg: #2a2a2a;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        z-index: 1040;
+        transition: left 0.3s;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+}
